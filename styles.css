@@ -1,0 +1,642 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container, .container2, .container4 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  background-color: #f4f4f4;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Keeps logo on left, nav on right */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo aligned to the right */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+}
+
+.logo-icon {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.logo span {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.logo:hover span {
+  color: #0056b3;
+}
+
+
+/* Navigation menu aligned to the left */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('https://i.postimg.cc/T3C47Pvr/wallpaper.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 3px 4px 3px black;
+}
+
+.hero p {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-shadow: 3px 4px 3px black;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-20px);}
+  60% {transform: translateY(-10px);}
+}
+
+/* About Artist */
+.about-artist {
+  padding: 50px 0;
+  text-align: center;
+  border: 3px solid;
+}
+
+.artist-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.artist-image {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.artist-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.work-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.work-type-box {
+  background: #f8f9fa; /* Default soft gray background */
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Soft pastel colors */
+.work-type-box:nth-child(1) { background: #ffebee; } /* Light Pink */
+.work-type-box:nth-child(2) { background: #e3f2fd; } /* Soft Blue */
+.work-type-box:nth-child(3) { background: #e8f5e9; } /* Light Green */
+.work-type-box:nth-child(4) { background: #f3e5f5; } /* Lavender */
+.work-type-box:nth-child(5) { background: #fff3e0; } /* Peach */
+.work-type-box:nth-child(6) { background: #ede7f6; } /* Light Purple */
+.work-type-box:nth-child(7) { background: #fbe9e7; } /* Coral Pink */
+.work-type-box:nth-child(8) { background: #e0f2f1; } /* Mint Green */
+
+/* Hover effect */
+.work-type-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Products */
+.products {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  border: 3px solid;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Increase padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  width: 100%;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Ensure cards take full width of their grid cell */
+  max-width: 100%; /* Prevent overflow */
+  cursor: pointer; /* Show it's clickable */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 100%; /* Ensure images don't overflow */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover; /* Better image handling */
+}
+
+.product-card .btn {
+  margin-top: auto;
+}
+
+/* Contact */
+.contact {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+  border: 3px solid;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-item {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-item.social img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* FIXED MODAL STYLES */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: auto; /* Allow vertical scrolling if content is tall */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show-modal {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 90%; /* Use percentage width */
+  width: 600px; /* Maximum width */
+  margin: 20px; /* Add some margin */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-images {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 4:3 Aspect ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+#modalImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* This ensures image maintains aspect ratio while fitting the container */
+  background-color: #f8f8f8; /* Light background for transparent images */
+}
+
+/* Close button for modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+.close:hover {
+  color: #007bff;
+}
+
+/* Modal navigation buttons */
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.modal-nav button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  width: 48%;
+}
+
+.modal-nav button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation classes */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    padding: 20px;
+  }
+  
+  .modal-images {
+    padding-bottom: 80%; /* Slightly taller aspect ratio for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  /* General container adjustments */
+  .container, .container2, .container4 {
+    padding: 0 10px;
+  }
+  
+  /* Header & Navigation */
+  header {
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .nav-menu li {
+    margin: 5px 10px;
+    font-size: 16px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 50px 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+  
+  /* About Artist Section */
+  .about-artist {
+    padding: 30px 0;
+  }
+  
+  .artist-info {
+    flex-direction: column;
+  }
+  
+  .artist-image {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .image-caption ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  
+  .work-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Products Section */
+  .products {
+    padding: 30px 0;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .product-card {
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 30px 0;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+  }
+  
+  .contact-item {
+    margin-bottom: 15px;
+  }
+  
+  /* Modal Styles */
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .modal-images {
+    padding-bottom: 90%; /* Even taller ratio for small screens */
+  }
+  
+  .modal-nav button {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  
+  .close {
+    font-size: 24px;
+    top: 5px;
+    right: 10px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .nav-menu {
+    font-size: 15px;
+  }
+  
+  .nav-menu li {
+    margin: 3px 5px;
+  }
+  
+  .work-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .work-type-box {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .artist-image img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Modal extra adjustments for very small screens */
+  .modal-content {
+    padding: 10px;
+    width: 92%;
+    margin: 5px;
+  }
+  
+  .modal-nav {
+    flex-direction: row;
+  }
+  
+  .modal-nav button {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  #modalTitle {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 20px;
+  }
+  
+  .nav-menu li {
+    margin: 3px;
+  }
+  
+  .work-types-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-nav {
+    gap: 5px;
+  }
+  
+  .modal-nav button {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
